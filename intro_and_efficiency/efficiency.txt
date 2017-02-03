@@ -9,8 +9,9 @@ Notation:
 Describe efficiency with 'Big O Notation' --> O(n)
 
 Format of big O, parenthesis, and algebraic expression:
-    ex. O(log(n)), O(1), O(n), O(n**2), O(n log(n)),
-        O(n**3)
+
+    ex. O(log(n)), O(1), O(n), O(n^2), O(n log(n)),
+        O(n^3)
 
     'n' represents the length of an input to your function
 
