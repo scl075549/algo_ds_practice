@@ -1,0 +1,28 @@
+Collections - a group of things
+    Inherently unordered, not all of the same type
+    Ex. Stuff-in-my-kitchen collection
+
+    Collections on their own are not a very useful programming construct
+    --> However, many data structures are extensions of collections and apply their own rules
+
+Lists - an ordered collection
+    No fixed size or ordering of elements --> mutable
+
+Arrays - ordered collection --> access elements by indexes
+    Insertion in arrays generally inefficient, requires moving all following elements to make room for the newly inserted item (extra inefficient on fixed size arrays, requires creating a new array of size + 1 and re-filling with items)
+
+    Deletion poses similar challenges
+
+    This all depends on a language's particular implementation of arrays but important to consider when talking about arrays abstractly
+
+Linked Lists - characterized by its order, order is determined by which elements are linked, not indices
+
+    Ex.
+    class Node(object):
+        def __init__(self, data, next):
+            this.data = data
+            this.next = next    # of type Node
+
+    Insertion and deletion in constant time since you don't have to iterate over every element of the list
+
+    Doubly Linked List --> prev. and next pointers
