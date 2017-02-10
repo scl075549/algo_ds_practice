@@ -1,5 +1,5 @@
 """
-Bubble sort is an elementary sorting algorithm. The idea is to imagine bubbling the smallest elements of a (vertical) array to the top; then bubble the next smallest; then so on until the entire array is sorted.
+Bubble sort (or Sinking sort, depending on the direction you rearrange elements) is an elementary sorting algorithm. Imagine an array arranged vertically: With each successive pass through the array, the smallest element 'bubbles up' to the top, eventually leaving the sorted array in place. Conversely (and shown below), in a sinking sort, the largest element 'sinks' to the bottom (end) of the array with each iteration.
 """
 def bubble_sort(arr):
     for n in range(len(arr)-1, 0, -1): # search 1 less each pass through
