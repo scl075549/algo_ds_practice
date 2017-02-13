@@ -1,0 +1,12 @@
+Maps:
+
+AKA Dictionaries --> key: value structure
+{'a': value_a, 'b': value_b, 'c': value_c}
+Keys in a map are a set --> no duplicate keys
+
+Sets:
+Collection data structure w/o repeated elements
+Unordered
+
+Hash Maps:
+<Key, Value> --- hash function on key ---> Hash Value[<K, V>]
