@@ -10,3 +10,7 @@ Unordered
 
 Hash Maps:
 <Key, Value> --- hash function on key ---> Hash Value[<K, V>]
+
+String Keys:
+ASCII:
+    A = 65, B = 66, C = 67 ...
