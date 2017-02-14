@@ -1,27 +1,37 @@
-Using a data structure that employs a hash function allows you to do lookups in constant ( O(1) ) time
+Using a data structure that employs a hash function allows you to do lookups
+in constant ( O(1) ) time
 
 Hash functions:
 Value ---- hash function ---> Hash Value
 
-Transforms some value in to one that can be stored and retrieved easily (like as an index of an array)
+Transforms some value in to one that can be stored and retrieved easily (like
+as an index of an array)
 
-Collision: when a hash function outputs the same hash value for two different inputs
+Collision: when a hash function outputs the same hash value for two different
+inputs
     ex.
     0123456 --> 56 % 10 = 6
     6543216 --> 16 % 10 = 6
 
-    Unlike in an array where one value corresponds to one index, hash functions can employ "buckets" for equal hash values --> a certain hash value can be represented as a collection for storing multiple values
+    Unlike in an array where one value corresponds to one index, hash
+    functions can employ "buckets" for equal hash values --> a certain hash
+    value can be represented as a collection for storing multiple values
     ex. Value --- hash function --> bucket 6 = [0123456, 6543216]
 
 Hash functions present limitations and choices:
-    - Using a hash function that spreads out your values nicely but takes up a lot of space
-    - One that uses less buckets, but you might have to do some searching in each bucket
+    - Using a hash function that spreads out your values nicely but takes up
+    a lot of space
+    - One that uses less buckets, but you might have to do some searching in
+    each bucket
 
 Load Factor:
 Load factor = Number of entries / number of buckets
 The purpose of a load factor is to get a sense of how "full" a hash table is.
-    ex. A hash table with 10 entries and 1000 buckets has a load factor of 0.01, and a majority of the buckets in the table would be empty. We are wasting memory by having so many empty buckets
+    ex. A hash table with 10 entries and 1000 buckets has a load factor of
+    0.01, and a majority of the buckets in the table would be empty. We are
+    wasting memory by having so many empty buckets
 
-Any table w/ a load factor ~ 0 may be due for a new hash function w/ fewer buckets
+Any table w/ a load factor ~ 0 may be due for a new hash function w/ fewer
+buckets
 Any table w/ a load factor ~ 1 may be due for a rehash and add more buckets
 Any table w/ load factor > 1 will have collisions

@@ -1,6 +1,7 @@
 Queues - First in, first out structure
 
-Opposite of stack in that the oldest element comes out first, otherwise they are pretty similar to stacks
+Opposite of stack in that the oldest element comes out first, otherwise they
+are pretty similar to stacks
 
 [ TAIL ] --> [  ] --> [  ] --> [  ] --> [  ] --> [ HEAD ]
  NEWEST                                           OLDEST
@@ -15,7 +16,9 @@ Dequeue - Remove the head element
 
 Peek - Look at the first element (but do not remove it)
 
-Once again, this structure can be implemented with a linked list, where you save references to the head and tail, so you can look them up in constant time:
+Once again, this structure can be implemented with a linked list, where you
+save references to the head and tail, so you can look them up in constant
+time:
 
 
     Enqueue --> [ TAIL ] --> [  ] --> [  ] --> [ HEAD ] --> Dequeue
@@ -23,8 +26,11 @@ Once again, this structure can be implemented with a linked list, where you save
                 [nxt:  ]     [<-]     [<-]     [nxt:<-]
 
 Deque - a specialized queue that lets you enqueue and dequeue from both ends
-    Kind of a specialized representation of stacks or queues, b/c you could represent either of them with it
+    Kind of a specialized representation of stacks or queues, b/c you could
+    represent either of them with it
 
-Priority queue - Like a regular queue but each element has an added parameter --> priority
-    Elements are removed based on the highest (or golf-style lowest being the highest) priority
+Priority queue - Like a regular queue but each element has an added parameter
+--> priority
+    Elements are removed based on the highest (or golf-style lowest being the
+    highest) priority
     In cases of equal priority, the oldest element gets removed first

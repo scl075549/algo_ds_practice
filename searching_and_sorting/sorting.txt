@@ -2,10 +2,13 @@ Intro to sorting:
 
 The naive approach --> comparing every element to every element
 
-In-place sorting: rearranges all of the elements to be sorted in the data structure they are already in w/o having to copy them over to a new data structure (low space-complexity)
+In-place sorting: rearranges all of the elements to be sorted in the data
+structure they are already in w/o having to copy them over to a new data
+structure (low space-complexity)
 
 Bubble sort (or Sinking sort) (naive):
-Go through array comparing elements side by side, and switching them when necessary.
+Go through array comparing elements side by side, and switching them when
+necessary.
 
 ex.
 [8, 3, 1, 7, 0] --> 8 > 3
@@ -35,21 +38,39 @@ Efficiency of Merge Sort: O(n log(n))
 
 
 Quick Sort:
-Uses divide and conquer to gain the same advantages as merge sort, while not using additional storage.
+Uses divide and conquer to gain the same advantages as merge sort, while not
+using additional storage.
 
-A quick sort first selects a pivot value. Pivot can be chosen at random, as first item of list, last item, median of (first, mid, last), etc.
+A quick sort first selects a pivot value. Pivot can be chosen at random, as
+first item of list, last item, median of (first, mid, last), etc.
 
 We will use the first item of the list as the pivot.
 
-The pivot value is used to split the list. The actual position where the pivot value belongs in the final sorted list is called the split point --> will be used to divide the list for subsequent calls to quicksort()
+The pivot value is used to split the list. The actual position where the
+pivot value belongs in the final sorted list is called the split point -->
+will be used to divide the list for subsequent calls to quicksort()
 
-Once the pivot has been selected, the next step is the partition process --> it will find the split point and at the same time move other items to the appropriate side of the list, either less than or greater than the pivot value.
+Once the pivot has been selected, the next step is the partition process -->
+it will find the split point and at the same time move other items to the
+appropriate side of the list, either less than or greater than the pivot
+value.
 
-The partition begins by setting two positional markers --> left and right --> the beginning and end of the remaining list (remember that the pivot is the first item)
+The partition begins by setting two positional markers --> left and right -->
+the beginning and end of the remaining list (remember that the pivot is the
+first item)
 
-The goal of the partition process is to move items on the wrong side w/ respect to the pivot value while also converging on the split point:
+The goal of the partition process is to move items on the wrong side w/
+respect to the pivot value while also converging on the split point:
 
-    We begin by incrementing the left until we first a value that is > pivot. Then we decrement right until we find a value < pivot.
-    At this point we have two values that are out of place w/ respect to eventual split point. We exchange these two items and begin again.
+    We begin by incrementing the left until we first a value that is > pivot.
+    Then we decrement right until we find a value < pivot.
+    At this point we have two values that are out of place w/ respect to
+    eventual split point. We exchange these two items and begin again.
 
-    When the right index becomes less than the left index, we stop. The position of the right index is now the split point. The pivot value can now be exchanged w/ the split point value and the pivot value is now in place. Now, all items to the left of the split point are < pivot value and all items to the right of the split point are > pivot value. The list can now be divided at the split point and quicksort() called recursively on the two halves.
+    When the right index becomes less than the left index, we stop. The
+    position of the right index is now the split point. The pivot value can
+    now be exchanged w/ the split point value and the pivot value is now in
+    place. Now, all items to the left of the split point are < pivot value
+    and all items to the right of the split point are > pivot value. The list
+    can now be divided at the split point and quicksort() called recursively
+    on the two halves.

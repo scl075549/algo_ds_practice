@@ -1,5 +1,6 @@
 Efficiency (complexity):
-    How well you are using your computer's resources to get a particular job done.
+    How well you are using your computer's resources to get a particular job
+    done.
 
     Think about efficiency in terms of SPACE and TIME
         How long does you code take to run
@@ -19,24 +20,32 @@ ex. sample function --> O(2n + 2)
 def decode(input):
     create output string (+1) (only happens once each time function is run)
     for each letter in input: (2n)
-    (both lines in loop must be run for every letter in the input, where 'n' is # letters in the input-string)
+    (both lines in loop must be run for every letter in the input, where 'n'
+    is # letters in the input-string)
         get new_letter from letter's location in cipher
         add new_letter to output
     return output (+1)
 
-    But actually --> in the for loop we need to do a computation to get the next letter in the string O(3n + 2), and depending on the data structure of the cipher O((26 + 3)n + 2)
+    But actually --> in the for loop we need to do a computation to get the
+    next letter in the string O(3n + 2), and depending on the data structure
+    of the cipher O((26 + 3)n + 2)
 
-    It turns out to be difficult to predict the number of calculations needed in a given piece of pseudocode
+    It turns out to be difficult to predict the number of calculations needed
+    in a given piece of pseudocode
 
 Approximation:
-The amount of steps can vary widely based on the specific implementations, so we use approximations when talking about efficiency in big O notation.
+The amount of steps can vary widely based on the specific implementations, so
+we use approximations when talking about efficiency in big O notation.
 
-From above example --> O(2n + 2), O(3n + 2), O(29n + 2) all approximate to O(n)
+From above example --> O(2n + 2), O(3n + 2), O(29n + 2) all approximate to
+O(n)
 
 Worst Case:
-From above example --> We need at least 26 checks to get through every letter in the alphabet (not likely in reality).
+From above example --> We need at least 26 checks to get through every letter
+in the alphabet (not likely in reality).
 
-We focus on worst-case terms because it puts an upper-bound on the amount of time our code is going to take.
+We focus on worst-case terms because it puts an upper-bound on the amount of
+time our code is going to take.
 
 
 Reference: bigocheatsheet.com
